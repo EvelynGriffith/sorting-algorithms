@@ -9,7 +9,7 @@ import typer
 from listsorting.listsorting.experiment import run_sorting_algorithm
 
 from rich.console import Console
-from tabulate import tabulate
+from tabulate import TableFormat, tabulate
 
 from listsorting import experiment
 
@@ -38,7 +38,7 @@ def listsorting(
     approach: ListSortingApproach = ListSortingApproach.bubblesort,
 ) -> None:
     """Conduct a doubling experiment to measure the performance of list sorting for various algorithms."""
-    # TODO: display diagnostic details about the configuration of the experiment
+    # display diagnostic details about the configuration of the experiment
     # display the details about the results from running the experiment,
     # first by giving a label so show that the program will provide output
     console.print()
@@ -51,6 +51,8 @@ def listsorting(
     # TODO: create the name of the algorithm as a string using the approach
     # and then appending the _sort postfix to the end of the name;
     # this leads to the creation of names like "merge_sort"
+    alg = f"{approach}_sort" 
+    experiment.run_sorting_algorithm(alg, experiment.generate_random_container(maximum_value))
     # TODO: conduct a doubling experiment for sorting by calling the run_sorting_algorithm_experiment_campaign
     # function with the inputs in the following order:
     # --> algorithm
@@ -69,6 +71,4 @@ def listsorting(
     # doubling experiment conducted by run_sorting_algorithm_experiment_campaign
     # Reference for the tabulate package:
     # https://github.com/astanin/python-tabulate
-    table = [["Input Size",696000,1989100000],["Minimum execution time in seconds",6371,5973.6],
-...          ["Maximum executions time in seconds",1737,73.5],["Average execution time in seconds",3390,641.85]]
-    print(tabulate(table))
+    console.print(tabulate(TableFormat, headers=["N","Bubble Sort", "Insertion Sort", "Merge Sort", "Quick Sort", "Tim Sort"]))
