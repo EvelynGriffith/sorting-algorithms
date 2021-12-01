@@ -159,7 +159,7 @@ def quick_sort(array: List[int]) -> List[int]:
 
     # The final result combines the sorted `low` list
     # with the `same` list and the sorted `high` list
-    return quicksort(low) + same + quicksort(high)
+    return quick_sort(low) + same + quick_sort(high)
 
 
 def insertion_sort_tim(array: int, left: int = 0, right=None):
