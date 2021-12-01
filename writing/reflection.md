@@ -166,11 +166,11 @@ The analysis that these mathematical equations give us actually makes a lot of s
 
 ### What is challenging about designing an experiment to evaluate sorting algorithm's performance?
 
-TODO: Provide a one-paragraph response that answers this question in your own words.
+I think one of the most challenging aspects is finding a way to set every algorithm on common ground so that you can test a certain variable. One of the things I struggled with was making sure that the container size I picked was a small enough container that Tim, Bubble, and Insertion could run it in a relatively quick amount of time, but make sure that it was a big enough container size that I was still collecting data on the Merge and Quick sort algorithms.
 
 ### Overall, what is the fastest sorting algorithm based on your empirical results?
 
-TODO: Provide a one-paragraph response that answers this question in your own words.
+I think the fastest function is the Quick-sort function
 
 ### How do the empirical results suggest that you don't yet know the entire story about the performance of sorting algorithms?
 
