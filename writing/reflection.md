@@ -138,13 +138,29 @@ TODO: It is not sufficient to ONLY explain WHICH configuration is faster!
 
 ### Analytical Evaluation
 
-TODO: Using the provided source code for the different containment check
-algorithms, your textbook, your experimental results, and any relevant online
-resources that you cite in this reflection, define the worst-case time
-complexity, using the big-O notation, for the five sorting algorithms. Please
-note that you do not need to prove the worst-case time complexity; rather you
-may reference existing sources that tell you the worst-case time complexity and
-then confirm that they are correct by using your empirical results.
+In order to complete the analytical evaluation for this assignment, I decided to use the already given doubling data to determine the doubling ratios for each sorting algorithm.
+
+For Bubble-sort:
+
+- I took the data from the above example of a Bubble Sort and divided the example for a container size of 2048/1024. This gave an output of 0.08079/0.02025 = 3.99, which can be rounded to 4.
+
+For Quick-Sort:
+
+- I took the data from the above example of a Quick Sort and divided the example for a container size of 2048/1024. This gave an output of 0.06504/0.03115 = 2.09, which can be rounded to 2.
+
+For Merge-Sort:
+
+- I took the data from the above example of a Merge Sort and divided the example for a container size of 2048/1024. This gave an output of 0.14235/0.06291 = 2.26, which can be rounded down to 2.
+
+For Insertion-Sort:
+
+- I took the data from the above example of a Insertion Sort and divided the example for a container size of 2048/1024. This gave an output of 0.03127/0.00821 = 3.81, which can be rounded to 4.
+
+For Tim-Sort:
+
+- I took the data from the above example of a Tim Sort and divided the example for a container size of 2048/1024. This gave an output of 0.04482/0.01138 = 3.94, which can be rounded to 4.
+
+The analysis that these mathematical equations give us actually makes a lot of sense. Whenver I ran either the Insertion, Tim, or Bubble sort algorithms at the size container of 1024, they were unable to complete. Even if I ran them at half of that size they were not able to finish running, however the Merge, and Quick sorts were able to. I think it makes sense that the Merge and Quick sort algorithms have a linear worst case becuase they were much much faster than the other three.
 
 ## Professional Development
 
