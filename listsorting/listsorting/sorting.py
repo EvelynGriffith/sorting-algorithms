@@ -206,8 +206,7 @@ def tim_sort(array: List[int]) -> List[int]:
     # input array. The size of these slices is defined by
     # your `min_run` size.
     for i in range(0, n, min_run):
-        insertion_sort(array, i, min((i + min_run - 1), n - 1))
-
+        insertion_sort(array)
     # Now you can start merging the sorted slices.
     # Start from `min_run`, doubling the size on
     # each iteration until you surpass the length of

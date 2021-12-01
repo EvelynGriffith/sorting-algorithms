@@ -1,13 +1,10 @@
 # Sorting Algorithms
 
-## Add Your Name Here
+## Evelyn Griffith
 
 ## Program Output
 
 ### Report at least five examples of program output to demonstrate that your `listsorting` program works correctly
-
-TODO: Document and justify your choice for all of the experiment parameters
-TODO: Make sure that you provide one output for each of the sorting algorithms
 
 #### One output from running the `listsorting` program
 

@@ -6,7 +6,7 @@
 from enum import Enum
 
 import typer
-from listsorting.listsorting.experiment import run_sorting_algorithm
+from listsorting.experiment import run_sorting_algorithm
 
 from rich.console import Console
 from tabulate import TableFormat, tabulate
@@ -52,7 +52,7 @@ def listsorting(
     # and then appending the _sort postfix to the end of the name;
     # this leads to the creation of names like "merge_sort"
     alg = f"{approach}_sort" 
-    experiment.run_sorting_algorithm(alg, experiment.generate_random_container(maximum_value))
+    experiment.run_sorting_algorithm(alg, experiment.generate_random_container(starting_size, maximum_value))
     # conduct a doubling experiment for sorting by calling the run_sorting_algorithm_experiment_campaign
     # function with the inputs in the following order:
     # --> algorithm
@@ -72,4 +72,4 @@ def listsorting(
     # doubling experiment conducted by run_sorting_algorithm_experiment_campaign
     # Reference for the tabulate package:
     # https://github.com/astanin/python-tabulate
-    print(tabulate(table, headers=['Input Size', 'Min time (s)', 'Max time (s)', 'Avg time (s)']))
+    print(tabulate(table, headers=['Input Size', 'Min time (s)', 'Max time (s)', 'Avg time (s)'], showindex=False))
