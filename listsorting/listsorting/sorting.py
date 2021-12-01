@@ -74,6 +74,7 @@ def insertion_sort(array: List[int]) -> List[int]:
 
     return array
 
+
 def merge(left: List[int], right: List[int]) -> List[int]:
     """Define a convenience method that supports the merging of lists."""
     # If the first array is empty, then nothing needs
@@ -128,9 +129,7 @@ def merge_sort(array: List[int]) -> List[int]:
     # Sort the array by recursively splitting the input
     # into two equal halves, sorting each half and merging them
     # together into the final result
-    return merge(
-        left=merge_sort(array[:midpoint]),
-        right=merge_sort(array[midpoint:]))
+    return merge(left=merge_sort(array[:midpoint]), right=merge_sort(array[midpoint:]))
 
 
 def quick_sort(array: List[int]) -> List[int]:
@@ -220,19 +219,19 @@ def tim_sort(array: List[int]) -> List[int]:
             # and the second starts) and the `endpoint` (where
             # the second array ends)
             midpoint = start + size - 1
-            end = min((start + size * 2 - 1), (n-1))
+            end = min((start + size * 2 - 1), (n - 1))
 
             # Merge the two subarrays.
             # The `left` array should go from `start` to
             # `midpoint + 1`, while the `right` array should
             # go from `midpoint + 1` to `end + 1`.
             merged_array = merge(
-                left=array[start:midpoint + 1],
-                right=array[midpoint + 1:end + 1])
+                left=array[start : midpoint + 1], right=array[midpoint + 1 : end + 1]
+            )
 
             # Finally, put the merged array back into
             # your array
-            array[start:start + len(merged_array)] = merged_array
+            array[start : start + len(merged_array)] = merged_array
 
         # Each iteration should double the size of your arrays
         size *= 2

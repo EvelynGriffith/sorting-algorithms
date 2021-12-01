@@ -42,7 +42,9 @@ def listsorting(
     # display the details about the results from running the experiment,
     # first by giving a label so show that the program will provide output
     console.print()
-    console.print(f":Sparkles: Conducting an experiment to measure the performance of list sorting.")
+    console.print(
+        f":Sparkles: Conducting an experiment to measure the performance of list sorting."
+    )
     console.print(f"The chosen sorting algorithm:{approach}")
     console.print(f"Starting size of the data container: {starting_size}")
     console.print(f"Number of doubles to execute: {number_doubles}")
@@ -51,15 +53,19 @@ def listsorting(
     # create the name of the algorithm as a string using the approach
     # and then appending the _sort postfix to the end of the name;
     # this leads to the creation of names like "merge_sort"
-    alg = f"{approach}_sort" 
-    experiment.run_sorting_algorithm(alg, experiment.generate_random_container(starting_size, maximum_value))
+    alg = f"{approach}_sort"
+    experiment.run_sorting_algorithm(
+        alg, experiment.generate_random_container(starting_size, maximum_value)
+    )
     # conduct a doubling experiment for sorting by calling the run_sorting_algorithm_experiment_campaign
     # function with the inputs in the following order:
     # --> algorithm
     # --> starting_size
     # --> maximum_value
     # --> number_doubles
-    table = experiment.run_sorting_algorithm_experiment_campaign(alg, starting_size, maximum_value, number_doubles) 
+    table = experiment.run_sorting_algorithm_experiment_campaign(
+        alg, starting_size, maximum_value, number_doubles
+    )
     # use the tabulate function to create a data table of the experimental_results
     # make sure that the data table has a header that is organized in this fashion:
     # --> Column 1: Input Size
@@ -72,4 +78,10 @@ def listsorting(
     # doubling experiment conducted by run_sorting_algorithm_experiment_campaign
     # Reference for the tabulate package:
     # https://github.com/astanin/python-tabulate
-    print(tabulate(table, headers=['Input Size', 'Min time (s)', 'Max time (s)', 'Avg time (s)'], showindex=False))
+    print(
+        tabulate(
+            table,
+            headers=["Input Size", "Min time (s)", "Max time (s)", "Avg time (s)"],
+            showindex=False,
+        )
+    )
