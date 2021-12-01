@@ -124,17 +124,7 @@ RQ 3: What is the highest data container size that the individual appraoches can
 
 ### Empirical Evaluation
 
-TODO: The output data tables provided above of the ones that you should
-reference when you are reporting on your empirical evaluation.
 
-TODO: Provide at least three paragraphs that explain which containment checking
-algorithm is fastest, by how much it is faster, and how you knew that it was
-faster, referencing the data in the aforementioned command outputs and the data
-tables to support your response. You should make sure that you answer each of
-the at least three research questions that you posed in a previous section.
-
-TODO: Make sure that your responses explain WHY certain configurations are faster!
-TODO: It is not sufficient to ONLY explain WHICH configuration is faster!
 
 ### Analytical Evaluation
 
@@ -170,8 +160,7 @@ I think one of the most challenging aspects is finding a way to set every algori
 
 ### Overall, what is the fastest sorting algorithm based on your empirical results?
 
-I think the fastest function is the Quick-sort function
+I think the fastest function is the Quick-sort function. Not only was this notable through the doubling experiment which could be done in my analytical analysis, but it was also apparent when working through my experimental analysis because the times were able to speak for themselves.
 
 ### How do the empirical results suggest that you don't yet know the entire story about the performance of sorting algorithms?
-
 
