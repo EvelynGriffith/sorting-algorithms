@@ -114,7 +114,41 @@ RQ 3: What is the highest data container size that the individual appraoches can
 
 ### Empirical Evaluation
 
+RQ 1:
 
+- When running the experiment for this RQ, I was able to find some very interesting data which Is displayed in the table below.I chose to keep the numbers small for this experiment because I wanted to see how fine the differences are between the algorithms even when working with less data. I also chose to keep the container starting size as well as the Doubling experiment size the same because I think that eliminating the variables makes the data cleaner. Now, as for what I learned through this experiment, I think the fastest algorithm is the Quick-Sort algorithm. Not only is this algorithm faster, but after further investigation, it is also able to run larger data containers than the other sorting algorithms.
+
+|Sorting Alg.|Container Starting Size|Doubling|Avg. Time for Input Size|Size Largest Container|Avg. Time for Largest Contianer Size|
+|Bubble      |150                    |5       |0.02662                 |2400                  |7.53503                             |
+|Insertion   |150                    |5       |0.01128                 |2400                  |3.7856                              |
+|Merge       |150                    |5       |0.00869                 |2400                  |0.16748                             |
+|Quick       |150                    |5       |0.00427                 |2400                  |0.07807                             |
+|Tim         |150                    |5       |0.01762                 |2400                  |4.0565                              |
+
+RQ 2:
+
+- When running the experiment for RQ2, I was able to find some very interesting data that I can use to compare with the previous data. This RQ was meant to address the idea that the doubling of an experiment can also affect the run time of a program. I wasn't sure if the doubling itself was taking up time so I wanted to run this experiment to the best of my ability to see if this was adding time just like the container size was. The numbers that I got are not ideal because I would have hoped to get a final container size of 2400 just like the previous doubling experiment. However in order to do that, I would have had to have a starting container size of 18.75 which causes the program to crash. This makes sense because you cant have .75 of a peice of a container. So in order to remedy this, I chose to start at 19. This gives a final container size of 2432 which isn't perfect for the idea of this experiment, but still should be close enough numbers to see whether or not the actual action of doubling takes up time for the program.
+
+When running this program I found that for Bubble, the actual doubling takes about 8.40246-7.53503 = .29 seconds.
+When running this program I found that for Insertion, the actual doubling takes about 3.99956-3.7856 = .07 seconds.
+When running this program I found that for Merge, the actual doubling takes about 0.19847-0.16748 = .01 seconds.
+When running this program I found that for Quick, the actual doubling takes about 0.09066-0.07807 = .0033 seconds.
+When running this program I found that for Tim, the actual doubling takes about 4.66351-4.0565 = .203 seconds.
+
+This is interesting because it suggests that the Merge-Sort and the Quick-sort (which previous data already proved to be the fastest) is faster at actually doing the doubling experiment.
+
+|Sorting Alg.|Container Starting Size|Doubling|Avg. Time for Input Size|Size Largest Container|Avg. Time for Largest Contianer Size|
+|Bubble      |19                    |8       |0.00073                  |2432                  |8.40246                             |
+|Insertion   |19                    |8       |0.0003                   |2432                  |3.99956                             |
+|Merge       |19                    |8       |0.0008                   |2432                  |0.19847                             |
+|Quick       |19                    |8       |0.0006                   |2432                  |0.09066                             |
+|Tim         |19                    |8       |0.00031                  |2432                  |4.66351                             |
+
+RQ 3:
+
+- For this RQ I do not have any collected data. I did collect a little bit of data, but after running my experiment for a while I realized that it wasn't going to work the way that I had intended. In order to run this experiment, I was planning to put a number in for the starting size of my data container, set a timer for two minutes, and then adjust the data container starting size until I was able to find the point where that particular algorithm was able to produce an output in just under two minutes. This was meant to tell me which of the algorithms can run the largest data container in the same amount of time as the others. 
+
+However, when I was running the Bubble-Sort algorithm, the first algorithm that I tried to do this with, I realized that this was not going to function correctly. Here is why: When I was running the algorithm, I was able to get the data container up to a starting size of 260 and this would leave about 15 seconds left on my timer when the program was able to produce an output. This would have been fine, but it wasn't as close to the mark as I was hoping to get (I was shooting for somewhere around 5 seconds or less for the function to produce an output). However, I ended up getting impatient and instead of deciding to 
 
 ### Analytical Evaluation
 
