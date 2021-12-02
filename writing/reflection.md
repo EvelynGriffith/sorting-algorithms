@@ -96,21 +96,11 @@ Here are the results from running the experiment:
 
 ## Experiment Design
 
-TODO: Explain the setup for your experiment that you ran to characterize the
-performance of the different configurations of containment checking algorithms.
-For instance, you should consider the following parameters as a part of your
-experiment:
+RQ 1: The experiment that I am hoping to do for the first RQ will have a starting size container of 150 and will run through each sorting algorith to determine which one is fastest. This means that I will be running the algorithms with a doubling experiment number of 5. This is an important experiment to do becuase it will give me an idea of which algorithm is the fastest when using a common starting point for the data containers.
 
-- The specific sorting algorithm
-- The starting size of the data container: small values (e.g., 1024 numbers) to big
-  values (e.g., 1,048,576 numbers)
-- The total number of doubles conducted during the experiment (e.g., 5 or 10)
+RQ 2: The experiment that I will do for this question will be to change the data container size to 19. I chose this number because I want the program to run up to as close to the same data container size when it does the doubling experiment as possible, but I want it to do the doubling experiment more times than it did in the previous RQ. This will tell me how the doubling experiment effects the run time of the program.
 
-TODO: You may need to design a custom experiment for certain sorting algorithms
-due the fact that there may be some algorithms that are inefficient!
-
-TODO: You must justify every part of your experiment design and then furnish
-output examples to demonstrate that your program generates correct data!
+RQ 3: For the third and final question experiment, I will be locating the highest data container size that each individual approach can run in under one minute. This will tell me which one is the most efficient. I will keep the doubling experiment number as 5 for this experiment.
 
 ## Research Questions
 
