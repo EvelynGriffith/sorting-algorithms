@@ -9,7 +9,7 @@ import typer
 from listsorting.experiment import run_sorting_algorithm
 
 from rich.console import Console
-from tabulate import TableFormat, tabulate
+from tabulate import tabulate
 
 from listsorting import experiment
 
@@ -42,13 +42,11 @@ def listsorting(
     # display the details about the results from running the experiment,
     # first by giving a label so show that the program will provide output
     console.print()
-    console.print(
-        f":Sparkles: Conducting an experiment to measure the performance of list sorting."
-    )
+    console.print(f":Sparkles: Conducting an experiment to measure the performance of list sorting using {approach}: ")
     console.print(f"The chosen sorting algorithm:{approach}")
     console.print(f"Starting size of the data container: {starting_size}")
     console.print(f"Number of doubles to execute: {number_doubles}")
-    console.print(f"Here are the results from running the experiment:")
+    console.print(f"Here are the results from running the experiment with {approach}: ")
     console.print()
     # create the name of the algorithm as a string using the approach
     # and then appending the _sort postfix to the end of the name;
