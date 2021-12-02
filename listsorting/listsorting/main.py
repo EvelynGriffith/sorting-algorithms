@@ -42,7 +42,9 @@ def listsorting(
     # display the details about the results from running the experiment,
     # first by giving a label so show that the program will provide output
     console.print()
-    console.print(f":Sparkles: Conducting an experiment to measure the performance of list sorting using {approach}: ")
+    console.print(
+        f":Sparkles: Conducting an experiment to measure the performance of list sorting using {approach}: "
+    )
     console.print(f"The chosen sorting algorithm:{approach}")
     console.print(f"Starting size of the data container: {starting_size}")
     console.print(f"Number of doubles to execute: {number_doubles}")
