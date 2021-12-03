@@ -2,11 +2,10 @@
 
 # Reference for some algorithm implementations:
 # https://realpython.com/sorting-algorithms-python/
-"""Add in the imports required for the CLI as well as the functions."""
+
 from enum import Enum
 
 import typer
-from listsorting.experiment import run_sorting_algorithm
 
 from rich.console import Console
 from tabulate import tabulate
