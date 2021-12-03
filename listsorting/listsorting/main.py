@@ -1,5 +1,5 @@
 """Perform an experiment to study efficiency of sorting."""
-"""Add imports that connect modules."""
+
 # Reference for some algorithm implementations:
 # https://realpython.com/sorting-algorithms-python/
 
@@ -40,6 +40,7 @@ def listsorting(
     # display diagnostic details about the configuration of the experiment
     # display the details about the results from running the experiment,
     # first by giving a label so show that the program will provide output
+    """Create print statements."""
     console.print()
     console.print(
         f":Sparkles: Conducting an experiment to measure the performance of list sorting using {approach}: "
